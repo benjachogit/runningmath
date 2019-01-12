@@ -1,21 +1,10 @@
-doctype html
-html
-  head
-    title #{title}
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    // Latest compiled and minified CSS
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    // jQuery library
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    // Latest compiled JavaScript
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-    link(rel='stylesheet', href='/css/style.css')
-    
-  body(style="background-color:black;color:green;font-size:200px;text-align:center;")
-    main
-      block header
-      block content
-          text(style="margin-top:100px") TRUE !
-          form(method='GET' action='/')
-                    div.form-group
-                     button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Next
+extends default
+
+block header
+ header.header
+          text(style="font-size:80px;") THE MAZE RUNNING MATH
+block content
+    text(style="margin-top:10px;margin-left:130px;font-size:260px;color:green") CORRECT !
+    form(method='GET' action='/')
+              div.form-group
+              button.btn.btn-lg.btn-success(type='submit' style="margin-left:80%;width:200px;height:70px;font-size:30px;color:#EDD9A0") Next
