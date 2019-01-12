@@ -25,6 +25,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/question', (req, res) => {
+  if(req.query.question > 104){
+    res.render('numberfailed', {
+      title: "No question number",
+      qnumber : req.query.question
+    });
+  }
     res.render('profile', {
     title: `Question Number : ${req.query.question}`,
     qnumber : req.query.question
@@ -45,6 +51,7 @@ if(quiz.ans == qa){
   });
 }
 });
+
 
 app.set('port', process.env.PORT || 7000);
 
