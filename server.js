@@ -45,7 +45,9 @@ if(quiz.ans == qa){
   });
 }
 });
-process.env.PORT || 7000
-const server = app.listen(7000, () => {
-  console.log(`Express running → PORT ${server.address().port}`);
-});
+
+app.set('port', process.env.PORT || 7000);
+
+app.listen(app.get('port'), function(){
+          console.log('Express server listening on port ' + app.get('port'));
+          });
