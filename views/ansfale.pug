@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title #{title}
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    // jQuery library
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    // Latest compiled JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/css/style.css')
+    
+  body(style="background-color:black;color:red;font-size:200px;text-align:center;")
+    main
+      block header
+      block content
+          
+          text(style="margin-top:100px") FALSE !
+          form(method='GET' action='/question')
+                    div.form-group
+                     input#name.form-control.input-lg(type='hidden', value=`${qq}` name='question')
+                     button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Back
+          form(method='GET' action='/')
+                    div.form-group
+                     button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Next

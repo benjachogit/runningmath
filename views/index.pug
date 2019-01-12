@@ -1,0 +1,13 @@
+extends default
+
+block header
+ header.header
+          text(style="font-size:80px;") THE MAZE RUNNING MATH
+block content  
+    .container
+      .row
+        form(method='GET' action='/question')
+                    div.form-group
+                    label(for='question' style="font-size:40px") Question number :
+                     input#question.form-control.input-lg(type='text',  name='question' style="margin-top:10%; width:350px;height:200px;font-size:100px;")
+                     button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Submit
