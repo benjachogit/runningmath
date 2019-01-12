@@ -8,6 +8,8 @@ block content
       .row
         form(method='GET' action='/question')
                     div.form-group
-                    label(for='question' style="font-size:40px") Question number :
-                     input#question.form-control.input-lg(type='text',  name='question' style="margin-top:10%; width:350px;height:200px;font-size:100px;")
-                     button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Submit
+                     Text(style="font-size:80px;") Question number
+                     .input-group
+                        input#question.form-control.input-lg(type='text',  name='question' maxlength="3" style="margin-top:10%; width:350px;height:200px;font-size:100px;")
+                        span.input-group-btn
+                          button.btn(type='submit', style="margin-top:12%; width:300px;height:200px;font-size:100px;background-color:#A13F22;color:#EDD9A0") Go!
