@@ -1,26 +1,44 @@
-doctype html
-html
-  head
-    title #{title}
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    // Latest compiled and minified CSS
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    // jQuery library
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    // Latest compiled JavaScript
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-    link(rel='stylesheet', href='/css/style.css')
+//- doctype html
+//- html
+//-   head
+//-     title #{title}
+//-     meta(name="viewport" content="width=device-width, initial-scale=1")
+//-     // Latest compiled and minified CSS
+//-     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+//-     // jQuery library
+//-     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+//-     // Latest compiled JavaScript
+//-     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+//-     link(rel='stylesheet', href='/css/style.css')
     
-  body(style="background-color:black;color:red;font-size:200px;text-align:center;")
-    main
-      block header
-      block content
+//-   body(style="background-color:black;color:red;font-size:200px;text-align:center;")
+//-     main
+//-       block header
+//-       block content
           
-          text(style="margin-top:100px") FALSE !
-          form(method='GET' action='/question')
-                    div.form-group
-                     input#name.form-control.input-lg(type='hidden', value=`${qq}` name='question')
-                     button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Back
+//-           text(style="margin-top:100px") FALSE !
+//-           form(method='GET' action='/question')
+//-                     div.form-group
+//-                      input#name.form-control.input-lg(type='hidden', value=`${qq}` name='question')
+//-                      button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Back
+//-           form(method='GET' action='/')
+//-                     div.form-group
+//-                      button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Next
+extends default
+
+block header
+ header.header
+          text(style="font-size:80px;") THE MAZE RUNNING MATH
+block content
+    text(style="margin-top:0px;margin-left:250px;font-size:250px;color:red") WRONG !
+    .container
+      form(method='GET' action='/question')
+                      div.form-group
+                      input#name.form-control.input-lg(type='hidden', value=`${qq}` name='question')
+                      button.btn.btn-lg.btn-danger(type='submit' style="margin-left:-200%;width:200px;height:70px;font-size:30px;color:#EDD9A0") Back
+      .row
+        .col
+        .col 
           form(method='GET' action='/')
                     div.form-group
-                     button.btn.btn-lg.btn-default(type='submit' style="margin-left:76%") Next
+                    button.btn.btn-lg.btn-success(type='submit' style="margin-left:120%;width:200px;height:70px;font-size:30px;color:#EDD9A0") Next
